@@ -7,7 +7,7 @@ Design an IoT-based monitoring solution for aquaculture to monitor water paramet
 This project presents an IoT-based smart aquaculture monitoring system that continuously monitors critical water quality parameters such as pH and Dissolved Oxygen (DO). The collected data is transmitted to the cloud, visualized on a dashboard, and used to trigger aeration alerts when threshold limits are violated.
 
 ## System Architecture
-The system follows a standard IoT edge–cloud architecture.
+The system follows a standard IoT edge–cloud architecture as shown in the diagram below.
 ![System Architecture Diagram](system_architecture_diagram.png)
 
 
@@ -82,7 +82,7 @@ The system follows an edge–cloud computing model to ensure efficient monitorin
   The ESP32 gateway collects sensor readings and performs basic threshold evaluation, such as detecting low Dissolved Oxygen levels.
 
 **Cloud Processing:**  
- topics Cloud servers handle data storage, historical analysis, dashboard visualization, and alert management.
+ Cloud servers handle data storage, historical analysis, dashboard visualization, and alert management.
 
 **Alert Mechanism:**  
  When Dissolved Oxygen (DO) falls below the predefined safe threshold, the cloud triggers an aeration alert to notify the user.
