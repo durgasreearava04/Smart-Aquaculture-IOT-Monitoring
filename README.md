@@ -37,12 +37,13 @@ Dashboard & Aeration Alerts
 6. Aeration alerts are displayed on the dashboard.
 
 ## Alert Logic (Aeration Alert)
-
+```
 IF (pH < 6.5 OR pH > 8.5)
 OR (Dissolved Oxygen < 5 mg/L)
 THEN Aeration Alert = ON
 ELSE Aeration Alert = OFF
 
+```
 ## Sample JSON Output
 
 ```json
@@ -59,12 +60,44 @@ ELSE Aeration Alert = OFF
 
 The dashboard displays real-time pH and dissolved oxygen values using charts and indicators. When water quality parameters exceed safe thresholds, an aeration alert is highlighted to notify the farmer for immediate action.
 
+## IoT Architecture Understanding
+
+The proposed smart aquaculture monitoring system is designed using a standard IoT layered architecture:
+
+**Sensing Layer:**  
+  pH sensor and Dissolved Oxygen (DO) sensor are deployed in the aquaculture pond to continuously measure water quality parameters.
+
+**Edge/Gateway Layer:**  
+  An ESP32 microcontroller acts as the IoT gateway, interfacing with the sensors and collecting real-time data.
+
+**Communication Layer:**  
+  Sensor data is transmitted from the ESP32 to the cloud using Wi-Fi connectivity.
+
+**Cloud & Application Layer:**  
+  The cloud platform stores the incoming data, visualizes it on a dashboard, and manages alert notifications for unsafe conditions.
+
 ## Practical Feasibility
 
 1. Low-cost sensors suitable for aquaculture environments
 2. Real-time monitoring and cloud-based alerts
 3. Scalable architecture for small and large fish farms
 4. Reduces manual monitoring and improves fish health
+
+## Edge–Cloud Logic
+
+The system follows an edge–cloud computing model to ensure efficient monitoring and alert generation.
+
+**Edge Processing:**  
+  The ESP32 gateway collects sensor readings and performs basic threshold evaluation, such as detecting low Dissolved Oxygen levels.
+
+**Cloud Processing:**  
+ topics Cloud servers handle data storage, historical analysis, dashboard visualization, and alert management.
+
+**Alert Mechanism:**  
+ When Dissolved Oxygen (DO) falls below the predefined safe threshold, the cloud triggers an aeration alert to notify the user.
+
+This separation of responsibilities reduces latency, improves scalability, and ensures reliable aquaculture monitoring.
+
 
 ## Conclusion
 
