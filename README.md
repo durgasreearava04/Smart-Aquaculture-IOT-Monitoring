@@ -8,6 +8,8 @@ This project presents an IoT-based smart aquaculture monitoring system that cont
 
 ## System Architecture
 The system follows a standard IoT edge–cloud architecture.
+system_architecture_diagram.png
+
 
 pH Sensor + DO Sensor
       ↓
