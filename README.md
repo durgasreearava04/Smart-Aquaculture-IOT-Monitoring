@@ -10,15 +10,6 @@ This project presents an IoT-based smart aquaculture monitoring system that cont
 The system follows a standard IoT edge–cloud architecture.
 ![System Architecture Diagram](system_architecture_diagram.png)
 
-pH Sensor + DO Sensor
-      ↓
-ESP32 (Gateway)
-      ↓
-    Wi-Fi
-      ↓
-Cloud Platform
-      ↓
-Dashboard & Aeration Alerts
 
 ## Sensor Selection and Justification
 
